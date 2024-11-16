@@ -26,7 +26,7 @@ public sealed class PkmRawPlugin : IPlugin
     public ISaveFileProvider SaveFileEditor { get; } = null!;
 
     /// <summary>
-    /// Currently viewed PokéMon instance.
+    /// Currently viewed PokeMon instance.
     /// </summary>
     [NotNull]
     public IPKMView? Pkm { get; private set; }
@@ -61,10 +61,10 @@ public sealed class PkmRawPlugin : IPlugin
             return;
         }
 
-        tools.DropDownItems.Add(new ToolStripMenuItem("View raw PKM data", Resources.PluginIcon.ToBitmap(), ViewPokéMon));
+        tools.DropDownItems.Add(new ToolStripMenuItem("View raw PKM data", Resources.PluginIcon.ToBitmap(), ViewPokeMon));
     }
 
-    private void ViewPokéMon(object? sender, EventArgs e)
+    private void ViewPokeMon(object? sender, EventArgs e)
         => new RawViewer(Pkm.Data).Show();
 
     private static T GetArgumentOfType<T>(params object[] args)
