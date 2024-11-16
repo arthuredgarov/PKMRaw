@@ -2,5 +2,4 @@
 
 ### Future updates:
 - New tab which will display data beautified.
-- Text search functionality.
 - PokéMon comparison window.
